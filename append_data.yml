@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: append_data
+      lineinfile:
+        path: /root/append_data.yml
+        line: hello ansible
