@@ -1,0 +1,6 @@
+---
+ - hosts: all
+   become: true
+   tasks:
+    - name: creation of file using ansible playbook
+      file: path=/tmp/testfile.txt state=touch
