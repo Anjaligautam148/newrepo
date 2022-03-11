@@ -1,0 +1,15 @@
+---
+ - hosts: localhost
+   become: no
+   gather_facts: yes
+   tasks:
+
+    - name: install the latest version of apache
+
+      block:
+         - name: install httpd and memcached
+           ansible.builtin.yum:
+              name:
+              - httpd
+              - memcached
+              state: present
